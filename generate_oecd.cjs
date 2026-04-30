@@ -115,6 +115,7 @@ async function run() {
             }
         }
     }
+    fs.mkdirSync('public/api', { recursive: true });
     fs.writeFileSync('public/api/oecd.json', JSON.stringify(out, null, 2));
     console.log("Done. Output to public/api/oecd.json. Keys: ", Object.keys(out).length);
 }

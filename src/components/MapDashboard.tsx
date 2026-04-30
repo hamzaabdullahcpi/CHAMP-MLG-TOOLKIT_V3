@@ -192,7 +192,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
       setLoadingOecd(true);
       try {
         // We use a simulated API endpoint for realistic formatting without parsing 15MB SDMX JSON in browser.
-        const response = await fetch('/api/oecd.json');
+        const response = await fetch(`${import.meta.env.BASE_URL}api/oecd.json`);
         let oecdJsonData = null;
         if (response.ok) {
            oecdJsonData = await response.json();
