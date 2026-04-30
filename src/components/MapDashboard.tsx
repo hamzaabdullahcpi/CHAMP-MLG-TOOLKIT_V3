@@ -169,12 +169,30 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
         let queryName = normName;
         if (normName === 'United States') queryName = 'United States of America';
         
-        const res = await fetch(`https://data.cdp.net/api/id/3d2f-dcbt.json?$where=country_area='${encodeURIComponent(queryName)}'`);
-        const data = await res.json();
-        if (Array.isArray(data)) {
-          const totalCost = data.reduce((acc, curr) => acc + (parseFloat(curr.total_investment_cost_needed) || 0), 0);
-          setCdpData({ count: data.length, costNeeded: totalCost });
-          setCdpProjects(data);
+        let allData: any[] = [];
+        let offset = 0;
+        const limit = 50000;
+        let hasMore = true;
+
+        while (hasMore) {
+          const res = await fetch(`https://data.cdp.net/api/id/3d2f-dcbt.json?$where=country_area='${encodeURIComponent(queryName)}'&$limit=${limit}&$offset=${offset}`);
+          const data = await res.json();
+          if (Array.isArray(data)) {
+            allData = allData.concat(data);
+            if (data.length < limit) {
+              hasMore = false;
+            } else {
+              offset += limit;
+            }
+          } else {
+            hasMore = false;
+          }
+        }
+        
+        if (allData.length > 0) {
+          const totalCost = allData.reduce((acc, curr) => acc + (parseFloat(curr.total_investment_cost_needed) || 0), 0);
+          setCdpData({ count: allData.length, costNeeded: totalCost });
+          setCdpProjects(allData);
         } else {
           setCdpData({ count: 0, costNeeded: 0 });
           setCdpProjects([]);
