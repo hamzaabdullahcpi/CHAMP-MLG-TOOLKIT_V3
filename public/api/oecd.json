@@ -1,0 +1,1322 @@
+{
+  "Niger": {
+    "muniCount": 255,
+    "averageMunicipalitySize": "94928 pop.",
+    "urbPop": "0.2%",
+    "popDen": "19 per km²",
+    "sngExpenditure": "0.8%",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Chad": {
+    "muniCount": 420,
+    "averageMunicipalitySize": "39109 pop.",
+    "urbPop": "0.2%",
+    "popDen": "13 per km²",
+    "sngExpenditure": "2.1%",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Burkina Faso": {
+    "muniCount": 351,
+    "averageMunicipalitySize": "59553 pop.",
+    "urbPop": "0.3%",
+    "popDen": "76 per km²",
+    "sngExpenditure": "5.8%",
+    "sngRevenue": "8.9%",
+    "sngDebt": "-",
+    "sngInvestment": "11.2%"
+  },
+  "Burundi": {
+    "muniCount": 119,
+    "averageMunicipalitySize": "99923 pop.",
+    "urbPop": "0.1%",
+    "popDen": "427 per km²",
+    "sngExpenditure": "3.1%",
+    "sngRevenue": "4.7%",
+    "sngDebt": "-",
+    "sngInvestment": "9.2%"
+  },
+  "Gambia": {
+    "muniCount": 2,
+    "averageMunicipalitySize": "1208332 pop.",
+    "urbPop": "0.6%",
+    "popDen": "214 per km²",
+    "sngExpenditure": "2.0%",
+    "sngRevenue": "3.2%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Guinea": {
+    "muniCount": 362,
+    "averageMunicipalitySize": "36278 pop.",
+    "urbPop": "0.4%",
+    "popDen": "53 per km²",
+    "sngExpenditure": "0.3%",
+    "sngRevenue": "0.3%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Liberia": {
+    "muniCount": 24,
+    "averageMunicipalitySize": "210737 pop.",
+    "urbPop": "0.5%",
+    "popDen": "45 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Madagascar": {
+    "muniCount": 1695,
+    "averageMunicipalitySize": "16337 pop.",
+    "urbPop": "38.5%",
+    "popDen": "47 per km²",
+    "sngExpenditure": "0.7%",
+    "sngRevenue": "1.3%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Malawi": {
+    "muniCount": 35,
+    "averageMunicipalitySize": "546570 pop.",
+    "urbPop": "0.2%",
+    "popDen": "161 per km²",
+    "sngExpenditure": "13.6%",
+    "sngRevenue": "21.2%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Mali": {
+    "muniCount": 750,
+    "averageMunicipalitySize": "27001 pop.",
+    "urbPop": "0.4%",
+    "popDen": "16 per km²",
+    "sngExpenditure": "10.5%",
+    "sngRevenue": "12.6%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "7.1%"
+  },
+  "Mauritania": {
+    "muniCount": 219,
+    "averageMunicipalitySize": "21231 pop.",
+    "urbPop": "0.6%",
+    "popDen": "5 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Mozambique": {
+    "muniCount": 53,
+    "averageMunicipalitySize": "589725 pop.",
+    "urbPop": "0.4%",
+    "popDen": "39 per km²",
+    "sngExpenditure": "12.8%",
+    "sngRevenue": "5.9%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Rwanda": {
+    "muniCount": 28,
+    "averageMunicipalitySize": "462579 pop.",
+    "urbPop": "0.2%",
+    "popDen": "492 per km²",
+    "sngExpenditure": "18.2%",
+    "sngRevenue": "40.2%",
+    "sngDebt": "-",
+    "sngInvestment": "44.9%"
+  },
+  "Sierra Leone": {
+    "muniCount": 22,
+    "averageMunicipalitySize": "362590 pop.",
+    "urbPop": "42.9%",
+    "popDen": "110 per km²",
+    "sngExpenditure": "2.1%",
+    "sngRevenue": "3.0%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Togo": {
+    "muniCount": 117,
+    "averageMunicipalitySize": "70758 pop.",
+    "urbPop": "42.8%",
+    "popDen": "146 per km²",
+    "sngExpenditure": "1.3%",
+    "sngRevenue": "1.1%",
+    "sngDebt": "-",
+    "sngInvestment": "1.0%"
+  },
+  "Uganda": {
+    "muniCount": 176,
+    "averageMunicipalitySize": "259892 pop.",
+    "urbPop": "0.3%",
+    "popDen": "189 per km²",
+    "sngExpenditure": "16.3%",
+    "sngRevenue": "21.1%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "5.4%"
+  },
+  "Ethiopia": {
+    "muniCount": 1012,
+    "averageMunicipalitySize": "113600 pop.",
+    "urbPop": "21.7%",
+    "popDen": "101 per km²",
+    "sngExpenditure": "36.3%",
+    "sngRevenue": "55.3%",
+    "sngDebt": "-",
+    "sngInvestment": "34.8%"
+  },
+  "Somalia": {
+    "muniCount": 98,
+    "averageMunicipalitySize": "162176 pop.",
+    "urbPop": "46.1%",
+    "popDen": "25 per km²",
+    "sngExpenditure": "19.8%",
+    "sngRevenue": "69.9%",
+    "sngDebt": "-",
+    "sngInvestment": "2.7%"
+  },
+  "Benin": {
+    "muniCount": 77,
+    "averageMunicipalitySize": "157444 pop.",
+    "urbPop": "0.5%",
+    "popDen": "106 per km²",
+    "sngExpenditure": "3.2%",
+    "sngRevenue": "6.3%",
+    "sngDebt": "-",
+    "sngInvestment": "10.7%"
+  },
+  "Cabo Verde": {
+    "muniCount": 22,
+    "averageMunicipalitySize": "25272 pop.",
+    "urbPop": "0.7%",
+    "popDen": "138 per km²",
+    "sngExpenditure": "14.6%",
+    "sngRevenue": "20.1%",
+    "sngDebt": "0.4%",
+    "sngInvestment": "61.0%"
+  },
+  "Côte d’Ivoire": {
+    "muniCount": 201,
+    "averageMunicipalitySize": "131235 pop.",
+    "urbPop": "0.5%",
+    "popDen": "82 per km²",
+    "sngExpenditure": "2.4%",
+    "sngRevenue": "3.4%",
+    "sngDebt": "0.2%",
+    "sngInvestment": "2.4%"
+  },
+  "Egypt": {
+    "muniCount": 4695,
+    "averageMunicipalitySize": "21796 pop.",
+    "urbPop": "42.8%",
+    "popDen": "102 per km²",
+    "sngExpenditure": "11.7%",
+    "sngRevenue": "2.7%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Ghana": {
+    "muniCount": 261,
+    "averageMunicipalitySize": "119053 pop.",
+    "urbPop": "0.6%",
+    "popDen": "130 per km²",
+    "sngExpenditure": "1.7%",
+    "sngRevenue": "3.3%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "0.8%"
+  },
+  "Kenya": {
+    "muniCount": 59,
+    "averageMunicipalitySize": "911378 pop.",
+    "urbPop": "0.3%",
+    "popDen": "93 per km²",
+    "sngExpenditure": "15.5%",
+    "sngRevenue": "20.4%",
+    "sngDebt": "1.1%",
+    "sngInvestment": "80.3%"
+  },
+  "Morocco": {
+    "muniCount": 1538,
+    "averageMunicipalitySize": "23999 pop.",
+    "urbPop": "63.5%",
+    "popDen": "83 per km²",
+    "sngExpenditure": "11.7%",
+    "sngRevenue": "15.0%",
+    "sngDebt": "-",
+    "sngInvestment": "17.1%"
+  },
+  "Senegal": {
+    "muniCount": 557,
+    "averageMunicipalitySize": "30061 pop.",
+    "urbPop": "0.5%",
+    "popDen": "85 per km²",
+    "sngExpenditure": "3.6%",
+    "sngRevenue": "5.1%",
+    "sngDebt": "-",
+    "sngInvestment": "4.5%"
+  },
+  "Tanzania": {
+    "muniCount": 150,
+    "averageMunicipalitySize": "398228 pop.",
+    "urbPop": "0.4%",
+    "popDen": "63 per km²",
+    "sngExpenditure": "2.9%",
+    "sngRevenue": "3.7%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Tunisia": {
+    "muniCount": 350,
+    "averageMunicipalitySize": "33767 pop.",
+    "urbPop": "69.6%",
+    "popDen": "72 per km²",
+    "sngExpenditure": "3.8%",
+    "sngRevenue": "4.7%",
+    "sngDebt": "-",
+    "sngInvestment": "13.0%"
+  },
+  "Zambia": {
+    "muniCount": 116,
+    "averageMunicipalitySize": "158482 pop.",
+    "urbPop": "0.4%",
+    "popDen": "24 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Zimbabwe": {
+    "muniCount": 92,
+    "averageMunicipalitySize": "161554 pop.",
+    "urbPop": "0.3%",
+    "popDen": "38 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Angola": {
+    "muniCount": 164,
+    "averageMunicipalitySize": "200404 pop.",
+    "urbPop": "66.8%",
+    "popDen": "26 per km²",
+    "sngExpenditure": "3.6%",
+    "sngRevenue": "3.6%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Djibouti": {
+    "muniCount": 4,
+    "averageMunicipalitySize": "247001 pop.",
+    "urbPop": "0.8%",
+    "popDen": "43 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "0.5%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Eswatini": {
+    "muniCount": 68,
+    "averageMunicipalitySize": "17061 pop.",
+    "urbPop": "24.2%",
+    "popDen": "67 per km²",
+    "sngExpenditure": "1.8%",
+    "sngRevenue": "2.7%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Nigeria": {
+    "muniCount": 774,
+    "averageMunicipalitySize": "266330 pop.",
+    "urbPop": "0.5%",
+    "popDen": "223 per km²",
+    "sngExpenditure": "38.6%",
+    "sngRevenue": "36.3%",
+    "sngDebt": "3.9%",
+    "sngInvestment": "62.3%"
+  },
+  "Namibia": {
+    "muniCount": 57,
+    "averageMunicipalitySize": "44577 pop.",
+    "urbPop": "52.0%",
+    "popDen": "3 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Botswana": {
+    "muniCount": 16,
+    "averageMunicipalitySize": "146977 pop.",
+    "urbPop": "0.7%",
+    "popDen": "4 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Mauritius": {
+    "muniCount": 135,
+    "averageMunicipalitySize": "9376 pop.",
+    "urbPop": "40.8%",
+    "popDen": "620 per km²",
+    "sngExpenditure": "5.5%",
+    "sngRevenue": "7.9%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "16.0%"
+  },
+  "Seychelles": {
+    "muniCount": 26,
+    "averageMunicipalitySize": "3787 pop.",
+    "urbPop": "0.6%",
+    "popDen": "214 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "South Africa": {
+    "muniCount": 257,
+    "averageMunicipalitySize": "230773 pop.",
+    "urbPop": "0.7%",
+    "popDen": "49 per km²",
+    "sngExpenditure": "52.9%",
+    "sngRevenue": "63.0%",
+    "sngDebt": "3.8%",
+    "sngInvestment": "69.5%"
+  },
+  "Australia": {
+    "muniCount": 537,
+    "averageMunicipalitySize": "47834 pop.",
+    "urbPop": "86.2%",
+    "popDen": "3 per km²",
+    "sngExpenditure": "45.0%",
+    "sngRevenue": "47.3%",
+    "sngDebt": "26.6%",
+    "sngInvestment": "75.3%"
+  },
+  "Austria": {
+    "muniCount": 2093,
+    "averageMunicipalitySize": "4313 pop.",
+    "urbPop": "58.7%",
+    "popDen": "108 per km²",
+    "sngExpenditure": "33.1%",
+    "sngRevenue": "37.2%",
+    "sngDebt": "13.7%",
+    "sngInvestment": "40.4%"
+  },
+  "Belgium": {
+    "muniCount": 581,
+    "averageMunicipalitySize": "19890 pop.",
+    "urbPop": "98.1%",
+    "popDen": "379 per km²",
+    "sngExpenditure": "49.0%",
+    "sngRevenue": "53.5%",
+    "sngDebt": "25.9%",
+    "sngInvestment": "78.4%"
+  },
+  "Chile": {
+    "muniCount": 345,
+    "averageMunicipalitySize": "55409 pop.",
+    "urbPop": "87.7%",
+    "popDen": "25 per km²",
+    "sngExpenditure": "13.4%",
+    "sngRevenue": "18.5%",
+    "sngDebt": "-",
+    "sngInvestment": "10.9%"
+  },
+  "Germany": {
+    "muniCount": 10789,
+    "averageMunicipalitySize": "7715 pop.",
+    "urbPop": "79.8%",
+    "popDen": "233 per km²",
+    "sngExpenditure": "48.9%",
+    "sngRevenue": "51.9%",
+    "sngDebt": "25.5%",
+    "sngInvestment": "67.5%"
+  },
+  "Spain": {
+    "muniCount": 8131,
+    "averageMunicipalitySize": "5824 pop.",
+    "urbPop": "80.8%",
+    "popDen": "94 per km²",
+    "sngExpenditure": "47.3%",
+    "sngRevenue": "59.9%",
+    "sngDebt": "33.4%",
+    "sngInvestment": "67.1%"
+  },
+  "Sweden": {
+    "muniCount": 290,
+    "averageMunicipalitySize": "35702 pop.",
+    "urbPop": "88.0%",
+    "popDen": "23 per km²",
+    "sngExpenditure": "48.7%",
+    "sngRevenue": "52.0%",
+    "sngDebt": "19.3%",
+    "sngInvestment": "48.0%"
+  },
+  "Switzerland": {
+    "muniCount": 2148,
+    "averageMunicipalitySize": "4021 pop.",
+    "urbPop": "73.9%",
+    "popDen": "209 per km²",
+    "sngExpenditure": "58.8%",
+    "sngRevenue": "62.1%",
+    "sngDebt": "21.9%",
+    "sngInvestment": "67.3%"
+  },
+  "Argentina": {
+    "muniCount": 2311,
+    "averageMunicipalitySize": "19635 pop.",
+    "urbPop": "92.1%",
+    "popDen": "16 per km²",
+    "sngExpenditure": "48.7%",
+    "sngRevenue": "43.7%",
+    "sngDebt": "-",
+    "sngInvestment": "72.6%"
+  },
+  "Armenia": {
+    "muniCount": 484,
+    "averageMunicipalitySize": "6122 pop.",
+    "urbPop": "63.3%",
+    "popDen": "100 per km²",
+    "sngExpenditure": "7.2%",
+    "sngRevenue": "9.6%",
+    "sngDebt": "-",
+    "sngInvestment": "7.0%"
+  },
+  "Bolivia": {
+    "muniCount": 340,
+    "averageMunicipalitySize": "34332 pop.",
+    "urbPop": "0.7%",
+    "popDen": "11 per km²",
+    "sngExpenditure": "22.5%",
+    "sngRevenue": "34.3%",
+    "sngDebt": "3.1%",
+    "sngInvestment": "64.5%"
+  },
+  "Brazil": {
+    "muniCount": 5570,
+    "averageMunicipalitySize": "38161 pop.",
+    "urbPop": "87.1%",
+    "popDen": "25 per km²",
+    "sngExpenditure": "36.5%",
+    "sngRevenue": "59.5%",
+    "sngDebt": "18.6%",
+    "sngInvestment": "83.9%"
+  },
+  "China (People’s Republic of)": {
+    "muniCount": 2844,
+    "averageMunicipalitySize": "496107 pop.",
+    "urbPop": "61.4%",
+    "popDen": "147 per km²",
+    "sngExpenditure": "72.4%",
+    "sngRevenue": "79.4%",
+    "sngDebt": "20.6%",
+    "sngInvestment": "-"
+  },
+  "Dominican Republic": {
+    "muniCount": 158,
+    "averageMunicipalitySize": "68658 pop.",
+    "urbPop": "0.8%",
+    "popDen": "223 per km²",
+    "sngExpenditure": "2.0%",
+    "sngRevenue": "3.0%",
+    "sngDebt": "-",
+    "sngInvestment": "3.9%"
+  },
+  "Ecuador": {
+    "muniCount": 221,
+    "averageMunicipalitySize": "79833 pop.",
+    "urbPop": "0.6%",
+    "popDen": "69 per km²",
+    "sngExpenditure": "15.2%",
+    "sngRevenue": "15.0%",
+    "sngDebt": "-",
+    "sngInvestment": "63.2%"
+  },
+  "Honduras": {
+    "muniCount": 298,
+    "averageMunicipalitySize": "33237 pop.",
+    "urbPop": "0.6%",
+    "popDen": "88 per km²",
+    "sngExpenditure": "7.6%",
+    "sngRevenue": "10.2%",
+    "sngDebt": "0.7%",
+    "sngInvestment": "18.9%"
+  },
+  "Indonesia": {
+    "muniCount": 83813,
+    "averageMunicipalitySize": "3263 pop.",
+    "urbPop": "56.6%",
+    "popDen": "143 per km²",
+    "sngExpenditure": "46.6%",
+    "sngRevenue": "66.8%",
+    "sngDebt": "0.4%",
+    "sngInvestment": "44.3%"
+  },
+  "Jordan": {
+    "muniCount": 101,
+    "averageMunicipalitySize": "101021 pop.",
+    "urbPop": "91.4%",
+    "popDen": "114 per km²",
+    "sngExpenditure": "6.4%",
+    "sngRevenue": "6.4%",
+    "sngDebt": "1.9%",
+    "sngInvestment": "24.3%"
+  },
+  "Malaysia": {
+    "muniCount": 151,
+    "averageMunicipalitySize": "214344 pop.",
+    "urbPop": "77.2%",
+    "popDen": "98 per km²",
+    "sngExpenditure": "12.4%",
+    "sngRevenue": "20.8%",
+    "sngDebt": "0.5%",
+    "sngInvestment": "7.2%"
+  },
+  "Malta": {
+    "muniCount": 68,
+    "averageMunicipalitySize": "7725 pop.",
+    "urbPop": "94.7%",
+    "popDen": "1642 per km²",
+    "sngExpenditure": "1.1%",
+    "sngRevenue": "1.5%",
+    "sngDebt": "0.2%",
+    "sngInvestment": "2.1%"
+  },
+  "Myanmar": {
+    "muniCount": "-",
+    "averageMunicipalitySize": "-",
+    "urbPop": "0.3%",
+    "popDen": "80 per km²",
+    "sngExpenditure": "15.7%",
+    "sngRevenue": "28.3%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Nepal": {
+    "muniCount": 753,
+    "averageMunicipalitySize": "38694 pop.",
+    "urbPop": "0.2%",
+    "popDen": "198 per km²",
+    "sngExpenditure": "44.2%",
+    "sngRevenue": "60.2%",
+    "sngDebt": "-",
+    "sngInvestment": "53.4%"
+  },
+  "Nicaragua": {
+    "muniCount": 153,
+    "averageMunicipalitySize": "43298 pop.",
+    "urbPop": "0.6%",
+    "popDen": "51 per km²",
+    "sngExpenditure": "12.1%",
+    "sngRevenue": "16.7%",
+    "sngDebt": "-",
+    "sngInvestment": "34.2%"
+  },
+  "Palestinian Authority or West Bank and Gaza Strip": {
+    "muniCount": 485,
+    "averageMunicipalitySize": "9904 pop.",
+    "urbPop": "76.7%",
+    "popDen": "798 per km²",
+    "sngExpenditure": "7.7%",
+    "sngRevenue": "9.3%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Paraguay": {
+    "muniCount": 261,
+    "averageMunicipalitySize": "27328 pop.",
+    "urbPop": "0.6%",
+    "popDen": "18 per km²",
+    "sngExpenditure": "1.1%",
+    "sngRevenue": "1.2%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "18.2%"
+  },
+  "Philippines": {
+    "muniCount": 42046,
+    "averageMunicipalitySize": "2606 pop.",
+    "urbPop": "47.4%",
+    "popDen": "365 per km²",
+    "sngExpenditure": "15.7%",
+    "sngRevenue": "19.4%",
+    "sngDebt": "0.6%",
+    "sngInvestment": "11.1%"
+  },
+  "Sri Lanka": {
+    "muniCount": 341,
+    "averageMunicipalitySize": "64279 pop.",
+    "urbPop": "0.2%",
+    "popDen": "334 per km²",
+    "sngExpenditure": "11.1%",
+    "sngRevenue": "16.7%",
+    "sngDebt": "0.0%",
+    "sngInvestment": "-"
+  },
+  "Uruguay": {
+    "muniCount": 125,
+    "averageMunicipalitySize": "27790 pop.",
+    "urbPop": "95.5%",
+    "popDen": "20 per km²",
+    "sngExpenditure": "12.3%",
+    "sngRevenue": "13.6%",
+    "sngDebt": "-",
+    "sngInvestment": "33.7%"
+  },
+  "Uzbekistan": {
+    "muniCount": 9168,
+    "averageMunicipalitySize": "3734 pop.",
+    "urbPop": "0.5%",
+    "popDen": "76 per km²",
+    "sngExpenditure": "29.6%",
+    "sngRevenue": "31.9%",
+    "sngDebt": "-",
+    "sngInvestment": "38.6%"
+  },
+  "Venezuela": {
+    "muniCount": 335,
+    "averageMunicipalitySize": "84883 pop.",
+    "urbPop": "0.9%",
+    "popDen": "31 per km²",
+    "sngExpenditure": "9.4%",
+    "sngRevenue": "10.4%",
+    "sngDebt": "-",
+    "sngInvestment": "48.4%"
+  },
+  "Viet Nam": {
+    "muniCount": 10614,
+    "averageMunicipalitySize": "9171 pop.",
+    "urbPop": "37.3%",
+    "popDen": "294 per km²",
+    "sngExpenditure": "60.5%",
+    "sngRevenue": "57.6%",
+    "sngDebt": "0.7%",
+    "sngInvestment": "71.4%"
+  },
+  "New Zealand": {
+    "muniCount": 67,
+    "averageMunicipalitySize": "75885 pop.",
+    "urbPop": "86.7%",
+    "popDen": "19 per km²",
+    "sngExpenditure": "10.2%",
+    "sngRevenue": "11.3%",
+    "sngDebt": "6.9%",
+    "sngInvestment": "37.6%"
+  },
+  "United States": {
+    "muniCount": 35748,
+    "averageMunicipalitySize": "9086 pop.",
+    "urbPop": "82.7%",
+    "popDen": "-",
+    "sngExpenditure": "39.7%",
+    "sngRevenue": "58.6%",
+    "sngDebt": "39.8%",
+    "sngInvestment": "56.4%"
+  },
+  "United States of America": {
+    "muniCount": 35748,
+    "averageMunicipalitySize": "9086 pop.",
+    "urbPop": "82.7%",
+    "popDen": "-",
+    "sngExpenditure": "39.7%",
+    "sngRevenue": "58.6%",
+    "sngDebt": "39.8%",
+    "sngInvestment": "56.4%"
+  },
+  "Azerbaijan": {
+    "muniCount": 1606,
+    "averageMunicipalitySize": "6285 pop.",
+    "urbPop": "56.4%",
+    "popDen": "117 per km²",
+    "sngExpenditure": "2.0%",
+    "sngRevenue": "1.6%",
+    "sngDebt": "-",
+    "sngInvestment": "1.1%"
+  },
+  "Bulgaria": {
+    "muniCount": 265,
+    "averageMunicipalitySize": "26166 pop.",
+    "urbPop": "75.7%",
+    "popDen": "62 per km²",
+    "sngExpenditure": "17.8%",
+    "sngRevenue": "20.4%",
+    "sngDebt": "2.5%",
+    "sngInvestment": "25.2%"
+  },
+  "Cambodia": {
+    "muniCount": 1646,
+    "averageMunicipalitySize": "10157 pop.",
+    "urbPop": "24.2%",
+    "popDen": "92 per km²",
+    "sngExpenditure": "9.3%",
+    "sngRevenue": "15.7%",
+    "sngDebt": "-",
+    "sngInvestment": "2.8%"
+  },
+  "Cyprus": {
+    "muniCount": 380,
+    "averageMunicipalitySize": "3177 pop.",
+    "urbPop": "66.8%",
+    "popDen": "-",
+    "sngExpenditure": "3.6%",
+    "sngRevenue": "4.1%",
+    "sngDebt": "1.1%",
+    "sngInvestment": "14.7%"
+  },
+  "El Salvador": {
+    "muniCount": 262,
+    "averageMunicipalitySize": "24756 pop.",
+    "urbPop": "0.7%",
+    "popDen": "308 per km²",
+    "sngExpenditure": "11.7%",
+    "sngRevenue": "18.6%",
+    "sngDebt": "3.2%",
+    "sngInvestment": "46.0%"
+  },
+  "Guatemala": {
+    "muniCount": 340,
+    "averageMunicipalitySize": "49583 pop.",
+    "urbPop": "0.5%",
+    "popDen": "155 per km²",
+    "sngExpenditure": "11.7%",
+    "sngRevenue": "13.5%",
+    "sngDebt": "0.2%",
+    "sngInvestment": "56.0%"
+  },
+  "Kyrgyzstan": {
+    "muniCount": 484,
+    "averageMunicipalitySize": "13619 pop.",
+    "urbPop": "0.4%",
+    "popDen": "33 per km²",
+    "sngExpenditure": "10.8%",
+    "sngRevenue": "10.9%",
+    "sngDebt": "0.3%",
+    "sngInvestment": "14.5%"
+  },
+  "Montenegro": {
+    "muniCount": 24,
+    "averageMunicipalitySize": "25888 pop.",
+    "urbPop": "67.5%",
+    "popDen": "45 per km²",
+    "sngExpenditure": "11.5%",
+    "sngRevenue": "15.8%",
+    "sngDebt": "2.9%",
+    "sngInvestment": "-"
+  },
+  "Panama": {
+    "muniCount": 81,
+    "averageMunicipalitySize": "53269 pop.",
+    "urbPop": "68.4%",
+    "popDen": "57 per km²",
+    "sngExpenditure": "1.4%",
+    "sngRevenue": "1.7%",
+    "sngDebt": "-",
+    "sngInvestment": "3.7%"
+  },
+  "Thailand": {
+    "muniCount": 2443,
+    "averageMunicipalitySize": "28571 pop.",
+    "urbPop": "51.4%",
+    "popDen": "136 per km²",
+    "sngExpenditure": "15.8%",
+    "sngRevenue": "19.1%",
+    "sngDebt": "1.1%",
+    "sngInvestment": "30.5%"
+  },
+  "Jamaica": {
+    "muniCount": 14,
+    "averageMunicipalitySize": "206450 pop.",
+    "urbPop": "55.4%",
+    "popDen": "263 per km²",
+    "sngExpenditure": "1.5%",
+    "sngRevenue": "2.2%",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Colombia": {
+    "muniCount": 1103,
+    "averageMunicipalitySize": "46131 pop.",
+    "urbPop": "81.4%",
+    "popDen": "45 per km²",
+    "sngExpenditure": "32.7%",
+    "sngRevenue": "43.3%",
+    "sngDebt": "13.2%",
+    "sngInvestment": "47.9%"
+  },
+  "Costa Rica": {
+    "muniCount": 82,
+    "averageMunicipalitySize": "62123 pop.",
+    "urbPop": "80.8%",
+    "popDen": "100 per km²",
+    "sngExpenditure": "3.9%",
+    "sngRevenue": "4.5%",
+    "sngDebt": "0.2%",
+    "sngInvestment": "21.7%"
+  },
+  "Czechia": {
+    "muniCount": 6258,
+    "averageMunicipalitySize": "1692 pop.",
+    "urbPop": "74.1%",
+    "popDen": "-",
+    "sngExpenditure": "27.7%",
+    "sngRevenue": "32.5%",
+    "sngDebt": "3.5%",
+    "sngInvestment": "46.4%"
+  },
+  "Estonia": {
+    "muniCount": 79,
+    "averageMunicipalitySize": "16849 pop.",
+    "urbPop": "69.2%",
+    "popDen": "29 per km²",
+    "sngExpenditure": "23.3%",
+    "sngRevenue": "26.6%",
+    "sngDebt": "4.5%",
+    "sngInvestment": "33.3%"
+  },
+  "Finland": {
+    "muniCount": 309,
+    "averageMunicipalitySize": "17899 pop.",
+    "urbPop": "85.5%",
+    "popDen": "16 per km²",
+    "sngExpenditure": "40.1%",
+    "sngRevenue": "44.4%",
+    "sngDebt": "15.2%",
+    "sngInvestment": "58.5%"
+  },
+  "Greece": {
+    "muniCount": 325,
+    "averageMunicipalitySize": "33181 pop.",
+    "urbPop": "79.7%",
+    "popDen": "-",
+    "sngExpenditure": "6.5%",
+    "sngRevenue": "8.0%",
+    "sngDebt": "1.3%",
+    "sngInvestment": "31.2%"
+  },
+  "Hungary": {
+    "muniCount": 3177,
+    "averageMunicipalitySize": "3069 pop.",
+    "urbPop": "71.9%",
+    "popDen": "105 per km²",
+    "sngExpenditure": "12.5%",
+    "sngRevenue": "15.0%",
+    "sngDebt": "2.3%",
+    "sngInvestment": "20.9%"
+  },
+  "Iceland": {
+    "muniCount": 69,
+    "averageMunicipalitySize": "5311 pop.",
+    "urbPop": "93.9%",
+    "popDen": "4 per km²",
+    "sngExpenditure": "29.1%",
+    "sngRevenue": "32.9%",
+    "sngDebt": "13.8%",
+    "sngInvestment": "38.8%"
+  },
+  "Ireland": {
+    "muniCount": 31,
+    "averageMunicipalitySize": "161120 pop.",
+    "urbPop": "63.7%",
+    "popDen": "71 per km²",
+    "sngExpenditure": "8.9%",
+    "sngRevenue": "10.6%",
+    "sngDebt": "2.1%",
+    "sngInvestment": "32.5%"
+  },
+  "Italy": {
+    "muniCount": 7904,
+    "averageMunicipalitySize": "7535 pop.",
+    "urbPop": "71.0%",
+    "popDen": "197 per km²",
+    "sngExpenditure": "27.2%",
+    "sngRevenue": "32.2%",
+    "sngDebt": "11.2%",
+    "sngInvestment": "56.0%"
+  },
+  "Latvia": {
+    "muniCount": 43,
+    "averageMunicipalitySize": "44222 pop.",
+    "urbPop": "68.3%",
+    "popDen": "29 per km²",
+    "sngExpenditure": "26.1%",
+    "sngRevenue": "28.8%",
+    "sngDebt": "9.3%",
+    "sngInvestment": "41.1%"
+  },
+  "Lithuania": {
+    "muniCount": 60,
+    "averageMunicipalitySize": "46578 pop.",
+    "urbPop": "68.1%",
+    "popDen": "43 per km²",
+    "sngExpenditure": "22.7%",
+    "sngRevenue": "27.1%",
+    "sngDebt": "1.7%",
+    "sngInvestment": "39.5%"
+  },
+  "Luxembourg": {
+    "muniCount": 102,
+    "averageMunicipalitySize": "6199 pop.",
+    "urbPop": "91.5%",
+    "popDen": "244 per km²",
+    "sngExpenditure": "10.5%",
+    "sngRevenue": "11.5%",
+    "sngDebt": "1.5%",
+    "sngInvestment": "35.5%"
+  },
+  "Mexico": {
+    "muniCount": 2481,
+    "averageMunicipalitySize": "51968 pop.",
+    "urbPop": "80.7%",
+    "popDen": "66 per km²",
+    "sngExpenditure": "43.1%",
+    "sngRevenue": "60.0%",
+    "sngDebt": "2.5%",
+    "sngInvestment": "69.7%"
+  },
+  "Netherlands": {
+    "muniCount": 352,
+    "averageMunicipalitySize": "49549 pop.",
+    "urbPop": "92.2%",
+    "popDen": "420 per km²",
+    "sngExpenditure": "29.1%",
+    "sngRevenue": "31.3%",
+    "sngDebt": "10.2%",
+    "sngInvestment": "44.2%"
+  },
+  "Norway": {
+    "muniCount": 356,
+    "averageMunicipalitySize": "15111 pop.",
+    "urbPop": "83.0%",
+    "popDen": "9 per km²",
+    "sngExpenditure": "32.1%",
+    "sngRevenue": "32.4%",
+    "sngDebt": "21.2%",
+    "sngInvestment": "41.0%"
+  },
+  "Poland": {
+    "muniCount": 2477,
+    "averageMunicipalitySize": "15321 pop.",
+    "urbPop": "60.0%",
+    "popDen": "121 per km²",
+    "sngExpenditure": "30.6%",
+    "sngRevenue": "36.4%",
+    "sngDebt": "6.1%",
+    "sngInvestment": "43.2%"
+  },
+  "Slovak Republic": {
+    "muniCount": 2890,
+    "averageMunicipalitySize": "1889 pop.",
+    "urbPop": "53.9%",
+    "popDen": "111 per km²",
+    "sngExpenditure": "17.2%",
+    "sngRevenue": "20.0%",
+    "sngDebt": "3.1%",
+    "sngInvestment": "29.8%"
+  },
+  "Slovenia": {
+    "muniCount": 212,
+    "averageMunicipalitySize": "9906 pop.",
+    "urbPop": "55.1%",
+    "popDen": "103 per km²",
+    "sngExpenditure": "17.5%",
+    "sngRevenue": "20.9%",
+    "sngDebt": "3.0%",
+    "sngInvestment": "39.8%"
+  },
+  "Türkiye": {
+    "muniCount": 1390,
+    "averageMunicipalitySize": "60676 pop.",
+    "urbPop": "76.1%",
+    "popDen": "107 per km²",
+    "sngExpenditure": "8.4%",
+    "sngRevenue": "10.5%",
+    "sngDebt": "3.6%",
+    "sngInvestment": "12.7%"
+  },
+  "Albania": {
+    "muniCount": 61,
+    "averageMunicipalitySize": "46520 pop.",
+    "urbPop": "62.1%",
+    "popDen": "99 per km²",
+    "sngExpenditure": "18.7%",
+    "sngRevenue": "21.5%",
+    "sngDebt": "4.7%",
+    "sngInvestment": "20.0%"
+  },
+  "Bosnia and Herzegovina": {
+    "muniCount": 141,
+    "averageMunicipalitySize": "23268 pop.",
+    "urbPop": "49.0%",
+    "popDen": "64 per km²",
+    "sngExpenditure": "10.5%",
+    "sngRevenue": "10.7%",
+    "sngDebt": "3.8%",
+    "sngInvestment": "18.9%"
+  },
+  "Croatia": {
+    "muniCount": 555,
+    "averageMunicipalitySize": "43043 pop.",
+    "urbPop": "57.6%",
+    "popDen": "422 per km²",
+    "sngExpenditure": "26.1%",
+    "sngRevenue": "28.1%",
+    "sngDebt": "6.6%",
+    "sngInvestment": "45.1%"
+  },
+  "Georgia": {
+    "muniCount": 64,
+    "averageMunicipalitySize": "58031 pop.",
+    "urbPop": "59.5%",
+    "popDen": "53 per km²",
+    "sngExpenditure": "16.7%",
+    "sngRevenue": "19.9%",
+    "sngDebt": "-",
+    "sngInvestment": "32.6%"
+  },
+  "Kazakhstan": {
+    "muniCount": 6938,
+    "averageMunicipalitySize": "2703 pop.",
+    "urbPop": "57.7%",
+    "popDen": "7 per km²",
+    "sngExpenditure": "44.5%",
+    "sngRevenue": "59.6%",
+    "sngDebt": "1.5%",
+    "sngInvestment": "88.0%"
+  },
+  "Mongolia": {
+    "muniCount": 1710,
+    "averageMunicipalitySize": "1917 pop.",
+    "urbPop": "68.7%",
+    "popDen": "2 per km²",
+    "sngExpenditure": "24.0%",
+    "sngRevenue": "30.5%",
+    "sngDebt": "1.3%",
+    "sngInvestment": "29.5%"
+  },
+  "North Macedonia": {
+    "muniCount": 81,
+    "averageMunicipalitySize": "25587 pop.",
+    "urbPop": "58.5%",
+    "popDen": "81 per km²",
+    "sngExpenditure": "13.6%",
+    "sngRevenue": "17.0%",
+    "sngDebt": "-",
+    "sngInvestment": "44.9%"
+  },
+  "Pakistan": {
+    "muniCount": 12369,
+    "averageMunicipalitySize": "17859 pop.",
+    "urbPop": "0.4%",
+    "popDen": "277 per km²",
+    "sngExpenditure": "32.8%",
+    "sngRevenue": "66.5%",
+    "sngDebt": "4.2%",
+    "sngInvestment": "-"
+  },
+  "Peru": {
+    "muniCount": 2069,
+    "averageMunicipalitySize": "15936 pop.",
+    "urbPop": "78.3%",
+    "popDen": "26 per km²",
+    "sngExpenditure": "34.8%",
+    "sngRevenue": "40.6%",
+    "sngDebt": "0.6%",
+    "sngInvestment": "61.9%"
+  },
+  "Romania": {
+    "muniCount": 3180,
+    "averageMunicipalitySize": "6078 pop.",
+    "urbPop": "53.9%",
+    "popDen": "81 per km²",
+    "sngExpenditure": "22.6%",
+    "sngRevenue": "28.1%",
+    "sngDebt": "3.3%",
+    "sngInvestment": "52.7%"
+  },
+  "Serbia": {
+    "muniCount": 145,
+    "averageMunicipalitySize": "47643 pop.",
+    "urbPop": "56.5%",
+    "popDen": "78 per km²",
+    "sngExpenditure": "19.0%",
+    "sngRevenue": "22.1%",
+    "sngDebt": "1.8%",
+    "sngInvestment": "16.1%"
+  },
+  "Tajikistan": {
+    "muniCount": 368,
+    "averageMunicipalitySize": "25918 pop.",
+    "urbPop": "0.3%",
+    "popDen": "67 per km²",
+    "sngExpenditure": "28.3%",
+    "sngRevenue": "29.6%",
+    "sngDebt": "-",
+    "sngInvestment": "20.7%"
+  },
+  "Ukraine": {
+    "muniCount": 1469,
+    "averageMunicipalitySize": "30044 pop.",
+    "urbPop": "69.6%",
+    "popDen": "73 per km²",
+    "sngExpenditure": "25.0%",
+    "sngRevenue": "28.0%",
+    "sngDebt": "0.7%",
+    "sngInvestment": "68.2%"
+  },
+  "Canada": {
+    "muniCount": 3905,
+    "averageMunicipalitySize": "9732 pop.",
+    "urbPop": "81.6%",
+    "popDen": "4 per km²",
+    "sngExpenditure": "64.1%",
+    "sngRevenue": "78.8%",
+    "sngDebt": "75.8%",
+    "sngInvestment": "84.5%"
+  },
+  "Japan": {
+    "muniCount": 1747,
+    "averageMunicipalitySize": "72030 pop.",
+    "urbPop": "91.8%",
+    "popDen": "333 per km²",
+    "sngExpenditure": "39.5%",
+    "sngRevenue": "43.0%",
+    "sngDebt": "31.5%",
+    "sngInvestment": "67.7%"
+  },
+  "Korea": {
+    "muniCount": 226,
+    "averageMunicipalitySize": "229118 pop.",
+    "urbPop": "81.4%",
+    "popDen": "516 per km²",
+    "sngExpenditure": "45.8%",
+    "sngRevenue": "47.3%",
+    "sngDebt": "2.9%",
+    "sngInvestment": "59.0%"
+  },
+  "India": {
+    "muniCount": 267428,
+    "averageMunicipalitySize": "5160 pop.",
+    "urbPop": "34.9%",
+    "popDen": "420 per km²",
+    "sngExpenditure": "62.5%",
+    "sngRevenue": "67.5%",
+    "sngDebt": "20.4%",
+    "sngInvestment": "64.1%"
+  },
+  "Moldova": {
+    "muniCount": 898,
+    "averageMunicipalitySize": "2918 pop.",
+    "urbPop": "42.9%",
+    "popDen": "77 per km²",
+    "sngExpenditure": "24.5%",
+    "sngRevenue": "29.2%",
+    "sngDebt": "0.6%",
+    "sngInvestment": "51.3%"
+  },
+  "France": {
+    "muniCount": 34955,
+    "averageMunicipalitySize": "1928 pop.",
+    "urbPop": "81.0%",
+    "popDen": "123 per km²",
+    "sngExpenditure": "19.0%",
+    "sngRevenue": "21.8%",
+    "sngDebt": "11.9%",
+    "sngInvestment": "56.4%"
+  },
+  "Portugal": {
+    "muniCount": 308,
+    "averageMunicipalitySize": "33460 pop.",
+    "urbPop": "66.3%",
+    "popDen": "112 per km²",
+    "sngExpenditure": "13.6%",
+    "sngRevenue": "15.2%",
+    "sngDebt": "6.2%",
+    "sngInvestment": "50.0%"
+  },
+  "Bangladesh": {
+    "muniCount": 4894,
+    "averageMunicipalitySize": "33651 pop.",
+    "urbPop": "38.2%",
+    "popDen": "1116 per km²",
+    "sngExpenditure": "5.1%",
+    "sngRevenue": "6.7%",
+    "sngDebt": "0.1%",
+    "sngInvestment": "-"
+  },
+  "Bhutan": {
+    "muniCount": 209,
+    "averageMunicipalitySize": "3692 pop.",
+    "urbPop": "42.3%",
+    "popDen": "20 per km²",
+    "sngExpenditure": "35.2%",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Lao People’s Democratic Republic": {
+    "muniCount": 8507,
+    "averageMunicipalitySize": "855 pop.",
+    "urbPop": "36.3%",
+    "popDen": "31 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Haiti": {
+    "muniCount": 146,
+    "averageMunicipalitySize": "78100 pop.",
+    "urbPop": "0.6%",
+    "popDen": "411 per km²",
+    "sngExpenditure": "-",
+    "sngRevenue": "-",
+    "sngDebt": "-",
+    "sngInvestment": "-"
+  },
+  "Israel": {
+    "muniCount": 258,
+    "averageMunicipalitySize": "35724 pop.",
+    "urbPop": "92.6%",
+    "popDen": "418 per km²",
+    "sngExpenditure": "12.8%",
+    "sngRevenue": "17.3%",
+    "sngDebt": "2.0%",
+    "sngInvestment": "46.4%"
+  },
+  "Denmark": {
+    "muniCount": 98,
+    "averageMunicipalitySize": "59504 pop.",
+    "urbPop": "88.1%",
+    "popDen": "-",
+    "sngExpenditure": "64.4%",
+    "sngRevenue": "64.6%",
+    "sngDebt": "10.8%",
+    "sngInvestment": "46.9%"
+  },
+  "Kosovo": {
+    "muniCount": 38,
+    "averageMunicipalitySize": "46720 pop.",
+    "urbPop": "37.3%",
+    "popDen": "163 per km²",
+    "sngExpenditure": "23.5%",
+    "sngRevenue": "3.1%",
+    "sngDebt": "-",
+    "sngInvestment": "43.7%"
+  },
+  "United Kingdom": {
+    "muniCount": 374,
+    "averageMunicipalitySize": "179720 pop.",
+    "urbPop": "83.9%",
+    "popDen": "276 per km²",
+    "sngExpenditure": "20.7%",
+    "sngRevenue": "28.2%",
+    "sngDebt": "9.7%",
+    "sngInvestment": "29.3%"
+  }
+}
