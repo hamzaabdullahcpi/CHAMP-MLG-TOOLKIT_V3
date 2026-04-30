@@ -171,11 +171,12 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
         
         let allData: any[] = [];
         let offset = 0;
-        const limit = 50000;
+        const limit = 1000;
         let hasMore = true;
 
         while (hasMore) {
-          const res = await fetch(`https://data.cdp.net/api/id/3d2f-dcbt.json?$where=country_area='${encodeURIComponent(queryName)}'&$limit=${limit}&$offset=${offset}`);
+          const escapedName = queryName.replace(/'/g, "''"); // escape single quotes for SODA
+          const res = await fetch(`https://data.cdp.net/api/id/3d2f-dcbt.json?$where=country_area='${encodeURIComponent(escapedName)}'&$limit=${limit}&$offset=${offset}`);
           const data = await res.json();
           if (Array.isArray(data)) {
             allData = allData.concat(data);
@@ -852,6 +853,11 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ bounce: 0, duration: 0.3 }}
+              onMouseLeave={() => {
+                if (!showCdpModal) {
+                  setSelectedCountry(null);
+                }
+              }}
               className="xl:w-[380px] xl:max-w-[380px] xl:min-w-[380px] w-full bg-white flex flex-col items-stretch overflow-hidden border-t xl:border-t-0 xl:border-l border-line z-50 h-full absolute right-0 top-0 bottom-0 shadow-2xl"
             >
               <div className="p-6 border-b border-line bg-surface flex justify-between items-start sticky top-0 z-10">
