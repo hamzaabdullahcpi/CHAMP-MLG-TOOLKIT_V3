@@ -663,7 +663,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                               transition: "all 0.3s ease" 
                             },
                             hover: { 
-                              fill: activeTab === 'ndc' ? fill : (fill !== "#e2e8f0" || activeTab === 'finance' ? (activeTab === 'finance' ? "#475569" : "#2d3780") : "#d1d5db"), 
+                              fill: activeTab === 'ndc' ? fill : (activeTab === 'finance' ? (regionName ? "#334155" : "#d1d5db") : (fill !== "#e2e8f0" ? "#2d3780" : "#d1d5db")), 
                               stroke: ((selectedCountry && (normalizeName(geo.properties.name) === normalizeName(selectedCountry))) ? "#111827" : (activeTab === 'finance' && regionName && hoveredRegion === regionName ? "#e2e8f0" : "#ffffff")),
                               strokeWidth: ((selectedCountry && (normalizeName(geo.properties.name) === normalizeName(selectedCountry)))) ? 1.5 : (activeTab === 'finance' && regionName && hoveredRegion === regionName ? 0.75 : 0.5),
                               outline: "none" 
