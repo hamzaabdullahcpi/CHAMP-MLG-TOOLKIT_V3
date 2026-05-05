@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { AreaChart, Users, Globe2, FileText, ArrowRight, ExternalLink, ChevronDown, ChevronUp, ZoomIn, Maximize, Hand, MousePointer2, Info, X, Lightbulb, MapPin, Search } from 'lucide-react';
+import { AreaChart, Users, Globe2, FileText, ArrowRight, ExternalLink, ChevronDown, ChevronUp, ZoomIn, Maximize, Hand, MousePointer2, Info, X, Lightbulb, MapPin, Search, Activity } from 'lucide-react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { feature, merge } from 'topojson-client';
 // @ts-ignore
@@ -155,11 +155,19 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
   const [oecdData, setOecdData] = useState<any>(null);
   const [loadingOecd, setLoadingOecd] = useState(false);
 
+  const [sdgData, setSdgData] = useState<any>(null);
+  const [loadingSdg, setLoadingSdg] = useState(false);
+
+  const [unPopData, setUnPopData] = useState<any>(null);
+  const [loadingUnPop, setLoadingUnPop] = useState(false);
+
   React.useEffect(() => {
     if (!selectedCountry) {
       setCdpData(null);
       setCdpProjects([]);
       setOecdData(null);
+      setSdgData(null);
+      setUnPopData(null);
       return;
     }
     const fetchCDP = async () => {
@@ -210,8 +218,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
     const fetchOECD = async () => {
       setLoadingOecd(true);
       try {
-        // We use a simulated API endpoint for realistic formatting without parsing 15MB SDMX JSON in browser.
-        const response = await fetch(`${import.meta.env.BASE_URL}api/oecd.json`);
+        const response = await fetch(`/api/oecd.json`);
         let oecdJsonData = null;
         if (response.ok) {
            oecdJsonData = await response.json();
@@ -221,7 +228,6 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
         if (oecdJsonData && oecdJsonData[normName]) {
            setOecdData(oecdJsonData[normName]);
         } else {
-           // We do not have explicit OECD data for this country
            setOecdData(null);
         }
       } catch (err) {
@@ -232,8 +238,56 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
       }
     };
 
+    const fetchSDG = async () => {
+      setLoadingSdg(true);
+      try {
+        const response = await fetch(`/api/sdg.json`);
+        let sdgJsonData = null;
+        if (response.ok) {
+           sdgJsonData = await response.json();
+        }
+        
+        const normName = normalizeName(selectedCountry) || selectedCountry;
+        if (sdgJsonData && sdgJsonData[normName]) {
+           setSdgData(sdgJsonData[normName]);
+        } else {
+           setSdgData(null);
+        }
+      } catch (err) {
+        console.error("Failed to fetch SDG data", err);
+        setSdgData(null);
+      } finally {
+        setLoadingSdg(false);
+      }
+    };
+
+    const fetchUnPop = async () => {
+      setLoadingUnPop(true);
+      try {
+        const response = await fetch(`/api/unpop.json`);
+        let unPopJsonData = null;
+        if (response.ok) {
+           unPopJsonData = await response.json();
+        }
+        
+        const normName = normalizeName(selectedCountry) || selectedCountry;
+        if (unPopJsonData && unPopJsonData[normName]) {
+           setUnPopData(unPopJsonData[normName]);
+        } else {
+           setUnPopData(null);
+        }
+      } catch (err) {
+        console.error("Failed to fetch UN Pop data", err);
+        setUnPopData(null);
+      } finally {
+        setLoadingUnPop(false);
+      }
+    };
+
     fetchCDP();
     fetchOECD();
+    fetchSDG();
+    fetchUnPop();
   }, [selectedCountry]);
 
   const selectedCountryData = React.useMemo(() => {
@@ -503,14 +557,19 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
               setContainerSize({ width: rect.width, height: rect.height });
             }}
           >
-          {/* Info Button */}
-          <button
-            onClick={() => setIsInfoOpen(!isInfoOpen)}
-            className="absolute top-4 left-4 z-40 bg-white border border-line shadow-sm p-2 rounded-full hover:bg-slate-50 transition-colors text-slate-600 hover:text-[#3c4799] focus:outline-none"
-            title="Map Information"
-          >
-            <Info size={18} />
-          </button>
+          {/* Info Button and Instruction */}
+          <div className="absolute top-4 left-4 z-40 flex items-center gap-3">
+            <button
+              onClick={() => setIsInfoOpen(!isInfoOpen)}
+              className="bg-white border border-line shadow-sm p-2 rounded-full hover:bg-slate-50 transition-colors text-slate-600 hover:text-[#3c4799] focus:outline-none"
+              title="Map Information"
+            >
+              <Info size={18} />
+            </button>
+            <span className="text-[11px] font-medium text-slate-600 bg-white/50 backdrop-blur-sm px-2 py-1 rounded-md border border-white/40 hidden sm:block">
+              Click on a country to see more details
+            </span>
+          </div>
 
           {/* Info Modal */}
           <AnimatePresence>
@@ -909,21 +968,89 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                       ) : oecdData ? (
                         <div className="grid grid-cols-2 gap-2">
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm">
-                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Municipalities</p>
-                              <p className="text-[15px] font-bold text-ink">{typeof oecdData.muniCount === 'number' ? oecdData.muniCount.toLocaleString() : oecdData.muniCount}</p>
+                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Total Population</p>
+                              <p className="text-[15px] font-bold text-ink">{typeof oecdData.population === 'number' ? oecdData.population.toLocaleString() : oecdData.population}</p>
                            </div>
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm">
-                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Avg Size</p>
-                              <p className="text-[15px] font-bold text-ink">{oecdData.averageMunicipalitySize}</p>
+                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">GDP per Capita</p>
+                              <p className="text-[15px] font-bold text-ink">{oecdData.gdpPerCapita}</p>
                            </div>
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-accent">
                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Urban Population</p>
                               <p className="text-[15px] font-bold text-ink">{oecdData.urbPop}</p>
                            </div>
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-accent">
-                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Pop. Density</p>
-                              <p className="text-[15px] font-bold text-ink">{oecdData.popDen}</p>
+                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Average Local Govt Size</p>
+                              <p className="text-[15px] font-bold text-ink">{oecdData.averageMunicipalitySize}</p>
                            </div>
+                        </div>
+                      ) : (
+                        <div className="bg-slate-100 p-4 rounded-sm text-sm text-slate-500">
+                          Data not available for {selectedCountryData.name}.
+                        </div>
+                      )}
+
+                      <div className="mt-6"></div>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-4 flex items-center gap-2">
+                        <Activity size={14} />
+                        Sustainable Development Goals (UN SDG 11)
+                      </h4>
+                      {loadingSdg ? (
+                        <div className="text-sm text-slate-500 italic animate-pulse">Loading SDG data...</div>
+                      ) : sdgData ? (
+                        <div className="grid grid-cols-1 gap-2">
+                              <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm flex items-center justify-between border-l-2 border-l-blue-400">
+                               <div>
+                                  <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5" title="SDG 11.3.2">Direct Participation</p>
+                                  <p className="text-[10px] text-slate-400 font-light hidden sm:block">Cities with civil society orgs in planning</p>
+                               </div>
+                               <div className="text-right">
+                                  <p className="text-[15px] font-bold text-ink">{sdgData.participation}</p>
+                                  <p className="text-[9px] text-slate-400">({sdgData.participationYear})</p>
+                               </div>
+                            </div>
+                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm flex items-center justify-between border-l-2 border-l-emerald-400">
+                               <div>
+                                  <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5" title="SDG 11.b.2">Local DRR Strategies</p>
+                                  <p className="text-[10px] text-slate-400 font-light hidden sm:block">Local govts adopting policies</p>
+                               </div>
+                               <div className="text-right">
+                                  <p className="text-[15px] font-bold text-ink">{sdgData.localDrr}</p>
+                                  <p className="text-[9px] text-slate-400">({sdgData.localDrrYear})</p>
+                               </div>
+                            </div>
+                        </div>
+                      ) : (
+                        <div className="bg-slate-100 p-4 rounded-sm text-sm text-slate-500">
+                          Data not available for {selectedCountryData.name}.
+                        </div>
+                      )}
+
+                      <div className="mt-6"></div>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-4 flex items-center gap-2">
+                        <Users size={14} />
+                        UN Population Division (City Sizes)
+                      </h4>
+                      {loadingUnPop ? (
+                        <div className="text-sm text-slate-500 italic animate-pulse">Loading UN Population data...</div>
+                      ) : unPopData ? (
+                        <div className="grid grid-cols-2 gap-2">
+                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Total Cities Measured</p>
+                               <p className="text-[15px] font-bold text-ink">{unPopData.totalCities}</p>
+                            </div>
+                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Mega Cities (&gt;10M)</p>
+                               <p className="text-[15px] font-bold text-ink">{unPopData.megaCities}</p>
+                            </div>
+                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Large Cities (1M-10M)</p>
+                               <p className="text-[15px] font-bold text-ink">{unPopData.largeCities} ({unPopData.largeCitiesPct}%)</p>
+                            </div>
+                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Small/Med (&lt;1M)</p>
+                               <p className="text-[15px] font-bold text-ink">{unPopData.smallCities} ({unPopData.smallCitiesPct}%)</p>
+                            </div>
                         </div>
                       ) : (
                         <div className="bg-slate-100 p-4 rounded-sm text-sm text-slate-500">

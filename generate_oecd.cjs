@@ -81,10 +81,11 @@ async function run() {
         let sIdx = s.refAreaVals ? s.refAreaVals.indexOf(name) : -1;
         let soIdx = so.refAreaVals ? so.refAreaVals.indexOf(name) : -1;
         
-        let muniCount = sIdx>-1 ? getValue(s, sIdx, { 'MEASURE': 'MUN' }) : null;
         let avgSize = sIdx>-1 ? getValue(s, sIdx, { 'MEASURE': 'MUN_SIZE' }) : null;
-        let urbPop = soIdx>-1 ? getValue(so, soIdx, { 'MEASURE': 'URB_POP', 'UNIT_MEASURE': 'PT_POP' }) : null;
-        let popDen = soIdx>-1 ? getValue(so, soIdx, { 'MEASURE': 'DEN', 'UNIT_MEASURE': 'PS_KM2' }) : null;
+        let population = soIdx>-1 ? getValue(so, soIdx, { 'MEASURE': 'POP', 'UNIT_MEASURE': 'PS' }) : null;
+        let gdpPerCapita = soIdx>-1 ? getValue(so, soIdx, { 'MEASURE': 'GDP_PS', 'UNIT_MEASURE': 'USD_PPP_PS' }) : null;
+        let urgPopRaw = soIdx>-1 ? getValue(so, soIdx, { 'MEASURE': 'URB_POP', 'UNIT_MEASURE': 'PT_POP' }) : null;
+        let urbPop = urgPopRaw !== null ? (urgPopRaw <= 1.0 ? urgPopRaw * 100 : urgPopRaw) : null;
 
         // SECTOR: S13M (State and Local Government) OR S1313 (Local Government) if S13M not available
         let exp = getValue(f, i, { 'MEASURE': 'E1', 'UNIT_MEASURE': 'PT_OTE_S13_TRANSACT', 'SECTOR': 'S13M' });
@@ -99,12 +100,13 @@ async function run() {
         let inv = getValue(f, i, { 'MEASURE': 'E121', 'UNIT_MEASURE': 'PT_OTE_S13_TRANSACT', 'SECTOR': 'S13M' });
         if(inv === null) inv = getValue(f, i, { 'MEASURE': 'E121', 'UNIT_MEASURE': 'PT_OTE_S13_TRANSACT', 'SECTOR': 'S1313' });
 
-        if (urbPop !== null || exp !== null || muniCount !== null) {
+        if (urbPop !== null || exp !== null || population !== null) {
+            
             out[name] = { 
-                muniCount: muniCount ? Math.round(muniCount) : '-', 
-                averageMunicipalitySize: avgSize ? Math.round(avgSize) + ' pop.' : '-', 
+                population: population ? Math.round(population) : '-', 
+                gdpPerCapita: gdpPerCapita ? '$' + Math.round(gdpPerCapita).toLocaleString() : '-', 
+                averageMunicipalitySize: avgSize ? Math.round(avgSize).toLocaleString() + ' pop.' : '-',
                 urbPop: urbPop ? urbPop.toFixed(1) + '%' : '-', 
-                popDen: popDen ? Math.round(popDen) + ' per km²' : '-',
                 sngExpenditure: exp ? exp.toFixed(1) + '%' : '-',
                 sngRevenue: rev ? rev.toFixed(1) + '%' : '-',
                 sngDebt: debt ? debt.toFixed(1) + '%' : '-',
