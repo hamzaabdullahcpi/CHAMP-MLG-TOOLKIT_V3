@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 const unpop = {};
-const lines = fs.readFileSync('unpopulation_dataportal_20260501142809.csv', 'utf-8').split('\n');
+const rawLines = fs.readFileSync('unpopulation_dataportal_20260501142809.csv', 'utf-8').split('\n');
+const lines = Array.from(new Set(rawLines));
 
 for (let i = 1; i < lines.length; i++) {
   const line = lines[i];

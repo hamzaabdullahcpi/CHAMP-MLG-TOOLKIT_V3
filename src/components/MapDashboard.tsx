@@ -972,7 +972,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                               <p className="text-[15px] font-bold text-ink">{typeof oecdData.population === 'number' ? oecdData.population.toLocaleString() : oecdData.population}</p>
                            </div>
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm">
-                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">GDP per Capita</p>
+                              <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">GDP per Capita (PPP)</p>
                               <p className="text-[15px] font-bold text-ink">{oecdData.gdpPerCapita}</p>
                            </div>
                            <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-accent">
@@ -1029,14 +1029,14 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                       <div className="mt-6"></div>
                       <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-4 flex items-center gap-2">
                         <Users size={14} />
-                        UN Population Division (City Sizes)
+                        City Sizes (UN)
                       </h4>
                       {loadingUnPop ? (
                         <div className="text-sm text-slate-500 italic animate-pulse">Loading UN Population data...</div>
                       ) : unPopData ? (
                         <div className="grid grid-cols-2 gap-2">
                             <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
-                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Total Cities Measured</p>
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Total Cities (&gt;50k pop)</p>
                                <p className="text-[15px] font-bold text-ink">{unPopData.totalCities}</p>
                             </div>
                             <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
@@ -1048,7 +1048,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                                <p className="text-[15px] font-bold text-ink">{unPopData.largeCities} ({unPopData.largeCitiesPct}%)</p>
                             </div>
                             <div className="bg-white p-2.5 border border-line rounded-sm shadow-sm border-t-2 border-t-indigo-400">
-                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Small/Med (&lt;1M)</p>
+                               <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-0.5">Small/Med (50k-1M)</p>
                                <p className="text-[15px] font-bold text-ink">{unPopData.smallCities} ({unPopData.smallCitiesPct}%)</p>
                             </div>
                         </div>
@@ -1205,12 +1205,12 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                           <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-3">Regional Context</h4>
                           <div className="bg-white border border-line p-3 rounded-sm shadow-sm space-y-2">
                              <div className="flex justify-between items-center text-xs border-b border-line pb-2">
-                               <span className="text-slate-500">Current Flows</span>
-                               <span className="font-bold">${selectedCountryData.financeInfo.total}B</span>
+                               <span className="text-slate-500">Urban Climate Finance Flows</span>
+                               <span className="font-bold">${selectedCountryData.financeInfo.total}</span>
                              </div>
                              <div className="flex justify-between items-center text-xs">
-                               <span className="text-slate-500">Mitigation Needs</span>
-                               <span className="font-bold text-red-600">${selectedCountryData.financeInfo.mitigation}B</span>
+                               <span className="text-slate-500">Urban Climate Finance Needs (through 2030)</span>
+                               <span className="font-bold text-red-600">${selectedCountryData.financeInfo.mitigation}</span>
                              </div>
                           </div>
                         </div>
