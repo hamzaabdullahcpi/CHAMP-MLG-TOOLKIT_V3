@@ -59,53 +59,42 @@ const getFinanceRegionName = (country: string): string | null => {
 };
 
 const champCountries = new Set([
-  "Albania", "Andorra", "Antigua and Barbuda", "Armenia", "Australia", 
-  "Azerbaijan", "Bahamas", "Bangladesh", "Belgium", "Bhutan", 
-  "Bolivia", "Brazil", "Brunei Darussalam", "Bulgaria", "Burkina Faso", 
-  "Cabo Verde", "Canada", "Chad", "Chile", "Colombia", 
-  "Costa Rica", "Côte d'Ivoire", "Denmark", "Dominican Republic", "El Salvador", 
-  "Estonia", "Eswatini", "Ethiopia", "Finland", "France", 
-  "Germany", "Ghana", "Guatemala", "Hungary", "Iceland", 
-  "Italy", "Jamaica", "Japan", "Jordan", "Kenya", 
-  "Kiribati", "Kyrgyzstan", "Lebanon", "Lesotho", "Mexico", 
-  "Moldova", "Mongolia", "Morocco", "Netherlands", "Nicaragua", 
-  "Nigeria", "North Macedonia", "Norway", "Pakistan", "Palau", 
-  "Panama", "Papua New Guinea", "Paraguay", "Philippines", "Poland", 
-  "Portugal", "Rwanda", "Saint Vincent and the Grenadines", "Serbia", "Seychelles", 
-  "Sierra Leone", "South Korea", "Sri Lanka", "Sweden", "Tunisia", 
-  "Türkiye", "Turkmenistan", "United Arab Emirates", "Ukraine", "United Kingdom", 
-  "United States of America", "Yemen", 
-  "United States", "Dem. Rep. Korea", "Republic of Korea", "Ivory Coast"
+  "Andorra", "Australia", "Azerbaijan", "Bahamas", "Bangladesh", "Belgium", "Bhutan", "Bolivia", "Brazil", "Bulgaria", "Brunei Darussalam", "Burkina Faso", "Cabo Verde", "Canada", "Chile", "Colombia", "Costa Rica", "Côte d’Ivoire", "Denmark", "El Salvador", "Estonia", "Eswatini", "Ethiopia", "European Union", "Finland", "France", "Germany", "Hungary", "Iceland", "Italy", "Jamaica", "Japan", "Kenya", "Kyrgyzstan", "Lebanon", "Mexico", "Mongolia", "Morocco", "Netherlands", "Nicaragua", "Nigeria", "Norway", "Pakistan", "Panama", "Paraguay", "Poland", "Portugal", "Republic of Korea", "Moldova", "Rwanda", "Serbia", "Seychelles", "Sierra Leone", "Sri Lanka", "Sweden", "Türkiye", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Yemen"
 ]);
 
 const ndcCategories: Record<string, string> = {
-  "Angola": "A+", "Azerbaijan": "A+", "Bahamas": "A+", "Bahrain": "A+", "Bangladesh": "A+", 
-  "Belize": "A+", "Bolivia": "A+", "Brazil": "A+", "Burundi": "A+", "Cabo Verde": "A+", 
-  "Cambodia": "A+", "Canada": "A+", "Chile": "A+", "China": "A+", "Colombia": "A+", 
-  "Costa Rica": "A+", "Côte d'Ivoire": "A+", "Djibouti": "A+", "Ecuador": "A+", "El Salvador": "A+", 
-  "Ethiopia": "A+", "Fiji": "A+", "Gabon": "A+", "Guinea": "A+", "Holy See": "A+", 
-  "Iraq": "A+", "Kyrgyzstan": "A+", "Lebanon": "A+", "Liberia": "A+", "Mauritania": "A+", 
-  "Mauritius": "A+", "Mexico": "A+", "Morocco": "A+", "Nigeria": "A+", "Pakistan": "A+", 
-  "Paraguay": "A+", "Peru": "A+", "Qatar": "A+", "Moldova": "A+", "Russian Federation": "A+", "Russia": "A+",
-  "Rwanda": "A+", "Sao Tome and Principe": "A+", "Solomon Islands": "A+", "Somalia": "A+", 
-  "Sierra Leone": "A+", "South Africa": "A+", "Sri Lanka": "A+", "Suriname": "A+", "United Arab Emirates": "A+", 
-  "Uruguay": "A+", "Uzbekistan": "A+", "Vanuatu": "A+", "Venezuela": "A+",
-  "Andorra": "A-B", "Kazakhstan": "A-B", "Monaco": "A-B", "Nicaragua": "A-B", "Yemen": "A-B", "Zambia": "A-B",
-  "Austria": "A-B", "Barbados": "A-B", "Belgium": "A-B", "Bulgaria": "A-B", "Burkina Faso": "A-B", "Croatia": "A-B", 
-  "Cuba": "A-B", "Cyprus": "A-B", "Czechia": "A-B", "Denmark": "A-B", "Estonia": "A-B", "Eswatini": "A-B", 
-  "Finland": "A-B", "France": "A-B", "Germany": "A-B", "Greece": "A-B", "Hungary": "A-B", "Indonesia": "A-B", 
-  "Ireland": "A-B", "Italy": "A-B", "Kenya": "A-B", "Latvia": "A-B", "Lithuania": "A-B", "Luxembourg": "A-B", 
-  "Malta": "A-B", "Marshall Islands": "A-B", "Nepal": "A-B", "Netherlands": "A-B", "Poland": "A-B", "Portugal": "A-B", 
-  "Romania": "A-B", "Saudi Arabia": "A-B", "Singapore": "A-B", "Slovakia": "A-B", "Slovenia": "A-B", "Spain": "A-B", 
-  "Sweden": "A-B", "Tonga": "A-B", "Tuvalu": "A-B", "Zimbabwe": "A-B", "Bhutan": "A-B", "Malaysia": "A-B", "Mongolia": "A-B",
-  "Australia": "C", "Belarus": "C", "Maldives": "C", "Montenegro": "C", "Turkey": "C", "Türkiye": "C", 
-  "United Kingdom": "C", "United States": "C", "Brunei Darussalam": "C", "Jamaica": "C", "Mozambique": "C", 
-  "Serbia": "C", "Ukraine": "C"
+  "Andorra": "A", "Angola": "A+", "Australia": "C+", "Austria": "B+", "Azerbaijan": "A+",
+  "Bahamas": "A+", "Bahrain": "A+", "Bangladesh": "A+", "Barbados": "B+", "Belarus": "C+",
+  "Belgium": "B+", "Belize": "A+", "Bhutan": "B", "Bolivia": "A+", "Brazil": "A+",
+  "Brunei Darussalam": "C", "Bulgaria": "B+", "Burkina Faso": "B+", "Burundi": "A+", "Cabo Verde": "A+",
+  "Cambodia": "A+", "Canada": "A+", "Chile": "A+", "China": "A+", "Colombia": "A+",
+  "Costa Rica": "A+", "Côte d’Ivoire": "A+", "Croatia": "B+", "Cuba": "B+", "Cyprus": "B+",
+  "Czechia": "B+", "Denmark": "B+", "Djibouti": "A+", "Ecuador": "A+", "El Salvador": "A+",
+  "Estonia": "B+", "Eswatini": "B+", "Ethiopia": "A+", "European Union": "B+", "Fiji": "A+",
+  "Finland": "B+", "France": "B+", "Gabon": "A+", "Germany": "B+", "Greece": "B+",
+  "Guinea": "A+", "Holy See": "A+", "Hungary": "B+", "Indonesia": "B+", "Iraq": "A+",
+  "Ireland": "B+", "Italy": "B+", "Jamaica": "C", "Kazakhstan": "A", "Kenya": "B+",
+  "Kyrgyzstan": "A+", "Latvia": "B+", "Lebanon": "A+", "Liberia": "A+", "Lithuania": "B+",
+  "Luxembourg": "B+", "Malaysia": "B", "Maldives": "C+", "Malta": "B+", "Marshall Islands": "B+",
+  "Mauritania": "A+", "Mauritius": "A+", "Mexico": "A+", "Micronesia (Federated States of)": "A+", "Moldova": "A+",
+  "Monaco": "A", "Mongolia": "B", "Montenegro": "C", "Morocco": "A+", "Mozambique": "C",
+  "Nepal": "B+", "Netherlands": "B+", "Nicaragua": "A", "Nigeria": "A+", "Pakistan": "A+",
+  "Paraguay": "A+", "Peru": "A+", "Poland": "B+", "Portugal": "B+", "Qatar": "A+",
+  "Romania": "B+", "Russian Federation": "A+", "Rwanda": "A+", "Sao Tome and Principe": "A+", "Saudi Arabia": "B+",
+  "Serbia": "C", "Sierra Leone": "A+", "Singapore": "B+", "Slovakia": "B+", "Slovenia": "B+",
+  "Solomon Islands": "A+", "Somalia": "A+", "South Africa": "A+", "Spain": "B+", "Sri Lanka": "A+",
+  "Suriname": "A+", "Sweden": "B+", "Tonga": "B+", "Türkiye": "C+", "Tuvalu": "B+",
+  "Ukraine": "C", "United Arab Emirates": "A+", "United Kingdom": "C+", "United States of America": "C+", "Uruguay": "A+",
+  "Uzbekistan": "A+", "Vanuatu": "A+", "Venezuela": "A+", "Yemen": "A", "Zambia": "A",
+  "Zimbabwe": "B+"
 };
 
 const ndcColors = {
   "A+": "#3c4799",
-  "A-B": "#5d8d8b",
+  "A": "#5f70d6",
+  "B+": "#245e5b",
+  "B": "#5d8d8b",
+  "C+": "#d6a635",
   "C": "#f0c763",
   "None": "#e2e8f0"
 };
@@ -600,15 +589,15 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                     <>
                       <p className="leading-snug space-y-1.5">
                         <strong className="font-semibold text-ink text-[13px] block">Strong (Category A+ / A):</strong>
-                        Explicit and well-developed urban policies, dedicated urban strategies, and clear multi-level governance structures.
+                        Explicit and well-developed urban policies, dedicated urban strategies, and clear multi-level governance structures. (+ indicates means of implementation).
                       </p>
                       <p className="leading-snug space-y-1.5 pt-1">
-                        <strong className="font-semibold text-ink text-[13px] block">Moderate (Category B):</strong>
-                        Some urban references, identified urban challenges, but lacks comprehensive dedicated measures.
+                        <strong className="font-semibold text-ink text-[13px] block">Moderate (Category B+ / B):</strong>
+                        Some urban references, identified urban challenges, but lacks comprehensive dedicated measures. (+ indicates means of implementation).
                       </p>
                       <p className="leading-snug space-y-1.5 pt-1">
-                        <strong className="font-semibold text-ink text-[13px] block">Weak (Category C / D):</strong>
-                        Minimal or no urban context; urban areas strictly mentioned in vulnerability contexts without active policy measures.
+                        <strong className="font-semibold text-ink text-[13px] block">Low (Category C+ / C):</strong>
+                        Minimal or no urban context; urban areas strictly mentioned in vulnerability contexts without active policy measures. (+ indicates means of implementation).
                       </p>
                       <p className="text-xs text-ink-muted border-t border-line pt-2 mt-2 font-medium">Source: UN-Habitat</p>
                       <a href="https://unhabitat.org/sites/default/files/2025/02/urban_content_in_ndc_3.0._a_global_snapshot_updated-128-ndcs-1_1.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[#3c4799] hover:underline font-medium mt-1">
@@ -744,8 +733,11 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                               const category = ndcCategories[normalized] || ndcCategories[geo.properties.name] || 'None';
                               const categoryLabels: Record<string, string> = {
                                 "A+": "A+ (Strong + Means of Implementation)",
-                                "A-B": "A / B+ (Strong / Moderate)",
-                                "C": "C+ / C (Low Content)",
+                                "A": "A (Strong)",
+                                "B+": "B+ (Moderate + Means of Implementation)",
+                                "B": "B (Moderate)",
+                                "C+": "C+ (Low + Means of Implementation)",
+                                "C": "C (Low)",
                                 "None": "No Data / No Content"
                               };
                               setHoveredCountry({ name: normalized, stat: categoryLabels[category] });
@@ -856,11 +848,11 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                       {activeTab === 'champ' && (
                         <>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#3c4799]"></div>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#3c4799]"></div>
                              <span className="text-[13px] text-ink-muted">CHAMP Endorsing Country</span>
                           </div>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#e2e8f0] border border-slate-300"></div>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#e2e8f0] border border-slate-300"></div>
                              <span className="text-[13px] text-ink-muted">Not Endorsed</span>
                           </div>
                         </>
@@ -869,19 +861,31 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
                       {activeTab === 'ndc' && (
                         <>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#3c4799]"></div>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#3c4799]"></div>
                              <span className="text-[13px] text-ink-muted">A+ (Strong + Means of Implementation)</span>
                           </div>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#5d8d8b]"></div>
-                             <span className="text-[13px] text-ink-muted">A / B+ (Strong / Moderate)</span>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#5f70d6]"></div>
+                             <span className="text-[13px] text-ink-muted">A (Strong)</span>
                           </div>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#f0c763]"></div>
-                             <span className="text-[13px] text-ink-muted">C+ / C (Low Content)</span>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#245e5b]"></div>
+                             <span className="text-[13px] text-ink-muted">B+ (Moderate + Means of Implementation)</span>
                           </div>
                           <div className="flex items-center gap-3">
-                             <div className="w-3 h-3 bg-[#e2e8f0] border border-slate-300"></div>
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#5d8d8b]"></div>
+                             <span className="text-[13px] text-ink-muted">B (Moderate)</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#d6a635]"></div>
+                             <span className="text-[13px] text-ink-muted">C+ (Low + Means of Implementation)</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#f0c763]"></div>
+                             <span className="text-[13px] text-ink-muted">C (Low)</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                             <div className="w-3 h-3 flex-shrink-0 bg-[#e2e8f0] border border-slate-300"></div>
                              <span className="text-[13px] text-ink-muted">No Data / No Content</span>
                           </div>
                         </>
