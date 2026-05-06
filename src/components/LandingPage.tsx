@@ -51,51 +51,72 @@ export default function LandingPage({ onStart, onIntro, onNavigateToStep }: Land
 
   return (
     <div className="max-w-5xl mx-auto pb-20">
-      {/* Hero Section */}
+      {/* Hero Banner Section */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="pt-24 md:pt-32 pb-12 md:pb-16 flex flex-col items-center text-center border-b border-line mb-4"
+        className="relative w-full overflow-hidden mb-16 min-h-[45vh] lg:min-h-[50vh] flex flex-col justify-end group shadow-[0_20px_40px_-20px_rgba(0,0,0,0.1)] rounded-sm md:mt-8 border border-line"
       >
-        <div className="inline-flex items-center gap-3 px-4 py-2 border border-line bg-surface mb-12 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)]">
-          <div className="w-1.5 h-1.5 bg-accent"></div>
-          <span className="text-[11px] font-bold text-ink uppercase tracking-[0.2em]">A toolkit for national governments, cities and friends of CHAMP</span>
-        </div>
-        
-        <h1 className="font-heading text-5xl md:text-[5.5rem] font-medium tracking-tight text-ink mb-8 leading-[1.05] max-w-5xl mx-auto">
-          The <span className="text-accent">CHAMP</span> Toolkit.
-          <span className="block text-ink-muted mt-2 font-light">Financing Climate Action.</span>
-        </h1>
-        
-        <div className="max-w-3xl mx-auto text-center mb-10 space-y-8">
-          <p className="text-xl md:text-[22px] text-ink leading-relaxed font-light">
-            Empowering CHAMP countries to deliver national climate commitments and financing at the city level through <strong className="font-medium text-accent">Multi-Level Governance</strong>.
-          </p>
-          <div className="relative inline-block group">
-            <button
-              onClick={onIntro}
-              className="text-sm font-bold uppercase tracking-widest text-ink group-hover:text-accent transition-colors pb-1 border-b-2 border-ink group-hover:border-accent"
-            >
-              Read the introduction
-            </button>
-          </div>
-          <p className="text-[17px] text-ink-muted leading-[1.7] font-light max-w-2xl mx-auto">
-            Explore a <strong className="text-ink font-medium">5-step journey to Multilevel Governance</strong>. This sequenced path covers the spectrum of actions needed to operationalize MLG, while remaining flexible to national contexts.
-          </p>
-        </div>
-        
-        <div className="flex flex-col items-center gap-6 mb-24 mt-8">
-          <motion.button
-            onClick={onStart}
-            className="group relative inline-flex items-center gap-4 bg-ink text-surface px-10 py-5 text-[14px] font-bold uppercase tracking-wider hover:bg-accent hover:shadow-[0_4px_16px_rgba(60,71,153,0.3)] transition-all overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-white/20 -translate-x-[120%] group-hover:translate-x-[120%] skew-x-[-20deg] transition-transform duration-700 pointer-events-none" />
-            Explore the 5-step journey
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=80" 
+            alt="Sustainable City Skyline" 
+            className="w-full h-full object-cover transition-transform duration-[20s] ease-out group-hover:scale-105" 
+            referrerPolicy="no-referrer"
+          />
+          {/* Gradient overlay for depth and readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent"></div>
         </div>
 
-        {/* Flowing MLG Journey Graphic */}
+        <div className="relative z-10 p-8 md:p-14 lg:p-16 flex flex-col items-start text-left w-full h-full justify-end max-w-5xl">
+          <div className="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-black/40 backdrop-blur-md mb-6 rounded-sm">
+            <div className="w-1.5 h-1.5 bg-surface"></div>
+            <span className="text-[11px] font-bold text-surface uppercase tracking-[0.2em]">A toolkit for national governments, cities and friends of CHAMP</span>
+          </div>
+          
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-[5.5rem] font-medium tracking-tight text-surface mb-6 leading-[1.05]">
+            The <span className="bg-[#3c4799] text-white px-3 py-0.5 rounded-sm inline-block mx-1">CHAMP</span> Toolkit.
+            <span className="block text-surface/80 mt-2 font-light">Financing Climate Action.</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-surface/90 leading-relaxed font-light mb-8 max-w-3xl">
+            Empowering CHAMP countries to deliver national climate commitments and financing at the city level through Multi-Level Governance.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center mt-2">
+            <button
+              onClick={onIntro}
+              className="text-[15px] font-bold uppercase tracking-widest text-surface/90 hover:text-surface transition-colors pb-1 border-b-2 border-surface/40 hover:border-surface inline-flex items-center gap-2"
+            >
+              Read the introduction <ArrowRight size={16} />
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Flowing MLG Journey Graphic */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="mb-24 flex flex-col items-center"
+      >
+        <div className="flex flex-col items-center mb-12 w-full">
+          <motion.button
+            onClick={onStart}
+            className="group/btn relative inline-flex items-center justify-center gap-4 bg-ink text-surface px-10 py-5 text-[15px] font-bold uppercase tracking-widest hover:bg-accent hover:shadow-[0_4px_16px_rgba(60,71,153,0.3)] transition-all overflow-hidden w-full md:w-auto"
+          >
+            Explore the 5-step journey
+            <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+          </motion.button>
+          
+          <div className="text-center mt-10">
+            <p className="text-[17px] text-ink-muted leading-[1.7] font-light max-w-2xl mx-auto">
+              Explore a <strong className="text-ink font-medium">5-step journey to Multilevel Governance</strong>. This sequenced path covers the spectrum of actions needed to operationalize MLG.
+            </p>
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row items-stretch justify-center w-full max-w-5xl mx-auto bg-surface border border-line divide-y md:divide-y-0 md:divide-x divide-line relative z-20">
           {[
             { num: "01", label: "Assess Environments", goal: stepsData[0].goal },
@@ -104,7 +125,11 @@ export default function LandingPage({ onStart, onIntro, onNavigateToStep }: Land
             { num: "04", label: "Mobilize Finance", goal: stepsData[3].goal },
             { num: "05", label: "Scale & Enhance", goal: stepsData[4].goal }
           ].map((step, i) => (
-            <div key={i} className={`flex flex-col flex-1 p-6 md:p-8 relative group hover:bg-paper transition-colors cursor-pointer`}>
+            <div 
+              key={i} 
+              onClick={() => onNavigateToStep && onNavigateToStep(i + 1)} 
+              className="flex flex-col flex-1 p-6 md:p-8 relative group hover:bg-paper transition-colors cursor-pointer"
+            >
               <span className="font-heading text-accent text-xl font-medium mb-4 opacity-80 group-hover:opacity-100 transition-opacity">{step.num}</span>
               <span className="text-[15px] font-semibold text-ink leading-snug group-hover:text-accent transition-colors">{step.label}</span>
 
