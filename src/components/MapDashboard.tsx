@@ -133,6 +133,7 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
   const [activeTool, setActiveTool] = useState<'default' | 'pan'>('default');
   const [isDragging, setIsDragging] = useState(false);
   const [showZoomSlider, setShowZoomSlider] = useState(false);
+  const [showInsights, setShowInsights] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [geoData, setGeoData] = useState<any>(null);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -149,6 +150,65 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
 
   const [unPopData, setUnPopData] = useState<any>(null);
   const [loadingUnPop, setLoadingUnPop] = useState(false);
+
+  const [fullOecdData, setFullOecdData] = useState<any>(null);
+
+  React.useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}api/oecd.json`)
+      .then(res => {
+        if (res.ok) return res.json();
+        return null;
+      })
+      .then(data => {
+        if (data) setFullOecdData(data);
+      })
+      .catch(console.error);
+  }, []);
+
+  // Computed Insights
+  const champLowNdc = React.useMemo(() => {
+    return Array.from(champCountries).filter(country => {
+      const normalized = normalizeName(country);
+      const rating = ndcCategories[normalized] || ndcCategories[country];
+      return rating === 'C' || rating === 'C+';
+    }).sort();
+  }, []);
+
+  const highNdcNonChamp = React.useMemo(() => {
+    return Object.entries(ndcCategories).filter(([country, rating]) => {
+      if (rating !== 'A' && rating !== 'A+') return false;
+      const normalized = normalizeName(country);
+      return !champCountries.has(normalized) && !champCountries.has(country);
+    }).map(([country]) => country).sort();
+  }, []);
+
+  const ambitiousUnderfunded = React.useMemo(() => {
+    if (!fullOecdData) return [];
+    return Object.entries(ndcCategories).filter(([country, rating]) => {
+      if (rating !== 'A' && rating !== 'A+') return false;
+      const normalized = normalizeName(country);
+      const oecdEntry = fullOecdData[normalized] || fullOecdData[country];
+      if (oecdEntry && oecdEntry.sngInvestment && oecdEntry.sngInvestment !== '-') {
+        const val = parseFloat(oecdEntry.sngInvestment.replace('%', ''));
+        if (!isNaN(val) && val < 10) return true;
+      }
+      return false;
+    }).map(([country]) => country).sort();
+  }, [fullOecdData]);
+
+  const fiscalReadinessGap = React.useMemo(() => {
+    if (!fullOecdData) return [];
+    return Object.keys(fullOecdData).filter(country => {
+      const oecdEntry = fullOecdData[country];
+      const normalized = normalizeName(country);
+      if (champCountries.has(normalized) || champCountries.has(country)) return false;
+      if (oecdEntry && oecdEntry.sngExpenditure && oecdEntry.sngExpenditure !== '-') {
+        const val = parseFloat(oecdEntry.sngExpenditure.replace('%', ''));
+        if (!isNaN(val) && val > 20) return true;
+      }
+      return false;
+    }).sort();
+  }, [fullOecdData]);
 
   React.useEffect(() => {
     if (!selectedCountry) {
@@ -678,6 +738,109 @@ export default function MapDashboard({ stats, onNavigateToStep }: MapDashboardPr
               <Maximize size={18} />
             </button>
           </div>
+
+          {/* Insights Button & Panel */}
+          <div className="absolute bottom-6 right-6 z-40 flex flex-col items-end pointer-events-none">
+             <AnimatePresence>
+               {showInsights && (
+                 <motion.div 
+                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                   animate={{ opacity: 1, y: 0, scale: 1 }}
+                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                   className="bg-white border border-line shadow-2xl p-4 mb-3 w-[320px] rounded-md pointer-events-auto max-h-[400px] overflow-y-auto no-scrollbar"
+                 >
+                    <div className="flex items-center justify-between mb-4 border-b border-line pb-2">
+                      <h4 className="font-heading font-semibold text-ink flex items-center gap-2 text-sm uppercase tracking-wider">
+                        <Lightbulb className="w-4 h-4 text-accent" /> Action Insights
+                      </h4>
+                      <button onClick={() => setShowInsights(false)} className="text-slate-400 hover:text-ink"><X size={14}/></button>
+                    </div>
+                    
+                    <div className="space-y-5">
+                      {activeTab === 'champ' && (
+                        <div>
+                          <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">Potential Outreach Targets</p>
+                          <p className="text-[13px] text-ink-muted leading-relaxed mb-3">
+                            These countries display strong urban climate commitments in their NDCs (A or A+ rating) but have not formally endorsed CHAMP yet. They could represent promising opportunities for future initiative outreach.
+                          </p>
+                          <div className="flex flex-wrap gap-1">
+                            {highNdcNonChamp.map(c => (
+                               <button key={c} className="px-1.5 py-0.5 bg-[#eef2ff] text-[#3c4799] border border-[#c7d2fe] text-[10px] rounded-sm cursor-pointer hover:bg-[#e0e7ff] transition-colors" onClick={() => setSelectedCountry(c)}>{c}</button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {activeTab === 'ndc' && (
+                        <div>
+                          <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">Advocacy Opportunities</p>
+                          <p className="text-[13px] text-ink-muted leading-relaxed mb-3">
+                            These countries have signaled intent by endorsing CHAMP, but currently appear to have lower urban content in their NDCs (C or C+ rating). They might benefit from targeted capacity building or advocacy to further align their NDCs with CHAMP commitments.
+                          </p>
+                          <div className="flex flex-wrap gap-1">
+                            {champLowNdc.map(c => (
+                               <button key={c} className="px-1.5 py-0.5 bg-yellow-50 text-yellow-700 border border-yellow-200 text-[10px] rounded-sm cursor-pointer hover:bg-yellow-100 transition-colors" onClick={() => setSelectedCountry(c)}>{c}</button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {activeTab === 'finance' && (
+                        <>
+                            <div>
+                              <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">Targeting Financing Disparities</p>
+                              <p className="text-[13px] text-ink-muted leading-relaxed">
+                                Regions such as <strong>Middle East & North Africa</strong> (~46x gap) and <strong>Sub-Saharan Africa</strong> (~27x gap) show the largest relative disparities between estimated mitigation needs and tracked financial flows. <strong>CHAMP outreach</strong> could prioritize these regions to support the development of subnational finance mechanisms and attract catalytic capital.
+                              </p>
+                            </div>
+                            <div className="pt-2 border-t border-line">
+                              <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">Leveraging Investment Scale</p>
+                              <p className="text-[13px] text-ink-muted leading-relaxed">
+                                <strong>East Asia & Pacific</strong> and <strong>US & Canada</strong> appear to require the highest absolute volumes of mitigation finance globally. <strong>CHAMP</strong> could leverage leading countries in these regions to establish best practices for scaling up large-scale urban infrastructure investments globally.
+                              </p>
+                            </div>
+                            <div className="pt-4 mt-2 border-t border-line">
+                              <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">The "Ambitious but Underfunded" Group</p>
+                              <p className="text-[13px] text-ink-muted leading-relaxed mb-3">
+                                These countries display exemplary urban climate plans (A/A+ NDC rating) but have historically low subnational government public investment (below 10%). Advocacy here might strongly focus on unblocking finance.
+                              </p>
+                              <div className="flex flex-wrap gap-1">
+                                {ambitiousUnderfunded.map(c => (
+                                   <button key={c} className="px-1.5 py-0.5 bg-yellow-50 text-yellow-700 border border-yellow-200 text-[10px] rounded-sm cursor-pointer hover:bg-yellow-100 transition-colors" onClick={() => setSelectedCountry(c)}>{c}</button>
+                                ))}
+                              </div>
+                            </div>
+                            <div className="pt-4 mt-2 border-t border-line">
+                              <p className="text-[11px] font-semibold text-ink uppercase tracking-widest mb-1.5 text-accent">The "Fiscal Readiness" Gap</p>
+                              <p className="text-[13px] text-ink-muted leading-relaxed mb-3">
+                                These countries already empower subnational governments with significant expenditure responsibility (over 20% of public spending) but have not yet joined CHAMP. They could be prime targets for outreach.
+                              </p>
+                              <div className="flex flex-wrap gap-1">
+                                {fiscalReadinessGap.map(c => (
+                                   <button key={c} className="px-1.5 py-0.5 bg-[#eef2ff] text-[#3c4799] border border-[#c7d2fe] text-[10px] rounded-sm cursor-pointer hover:bg-[#e0e7ff] transition-colors" onClick={() => setSelectedCountry(c)}>{c}</button>
+                                ))}
+                              </div>
+                            </div>
+                        </>
+                      )}
+                    </div>
+                 </motion.div>
+               )}
+             </AnimatePresence>
+             
+             <button 
+               onClick={() => setShowInsights(!showInsights)}
+               className={`pointer-events-auto flex items-center justify-center w-10 h-10 rounded-full shadow-lg border transition-all ${
+                 showInsights 
+                   ? 'bg-slate-800 text-white border-slate-700' 
+                   : 'bg-white text-ink border-line hover:bg-slate-50'
+               }`}
+               title="Action Insights"
+             >
+               <Lightbulb className={`w-5 h-5 ${showInsights ? 'text-yellow-400' : 'text-accent'}`} />
+             </button>
+          </div>
+
           <ComposableMap
             projection={projection}
             width={900}
